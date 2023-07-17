@@ -1,4 +1,4 @@
-# Data generator
+# Solver of Q-Coverage and Q-Connectivity
 
 1. Firstly, open `cmd` and run command `pip install -r requirements.txt` to install necessary packages.
 2. Run `python main.py` with different flags to customize the generated data.
