@@ -1,6 +1,6 @@
 import argparse
 
-from generator import Generator
+from solver import Solver
 
 
 def two_element_list(string):
@@ -33,11 +33,9 @@ parser.add_argument('--b', metavar='base', type=two_element_list, dest="base",
                     help='base station location', default=[0, 0])
 
 args = parser.parse_args()
-# arg_dict = vars(args)
-# for key, value in arg_dict.items():
-#     print(key, value)
+
 
 if __name__ == '__main__':
-    generator = Generator(args.num_target, args.q_max, args.r_s, args.r_c, args.r_cl,
+    solver = Solver(args.num_target, args.q_max, args.r_s, args.r_c, args.r_cl,
                           args.area, args.rand_q, args.base)
-    generator.generate()
+    solver.solve()
