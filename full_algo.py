@@ -106,7 +106,7 @@ class Net:
                 self.sList.append(
                     Sensor(get_random_point_in_polygon(poly), self.r, [self.targets[i] for i in self.regions[i]]))
 
-    def createCluster(self):
+    def create_cluster(self):
         key = lambda t: t.q
         # sort to prioritize targets with large q (in case they have the same #neighbor)
         self.targets.sort(key=key,

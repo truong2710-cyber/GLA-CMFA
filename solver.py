@@ -1,6 +1,7 @@
 from full_algo import *
 import json
 import numpy as np
+from visualize import visualize
 
 OUTPUT_DIR = '.\\out.json'
 
@@ -31,7 +32,7 @@ class Solver:
         net.cut_disk_set(k=2)
         net.place_sensor()
         # Phase 2
-        net.createCluster()
+        net.create_cluster()
         net.build_graph()
         net.insert_edge()
         net.place_relay_nodes_in_clusters()
@@ -51,3 +52,5 @@ class Solver:
 
         with open(OUTPUT_DIR, "w") as out_file:
             json.dump(out_dict, out_file)
+        # visualize the result
+        visualize(net)
