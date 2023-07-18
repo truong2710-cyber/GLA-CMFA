@@ -11,11 +11,11 @@ def visualize(net, filename='result.pdf', map=None):
                 [net.targets[i].y for i in range(len(net.targets))],
                 marker='*', color='r', label='Target')
     plt.scatter([net.sList[i].x for i in range(len(net.sList))],
-            [net.sList[i].y for i in range(len(net.sList))],
-            marker='^', color='g', label='Sensor')
+                [net.sList[i].y for i in range(len(net.sList))],
+                marker='^', color='g', label='Sensor')
     plt.scatter([net.relay_nodes[i].x for i in range(len(net.relay_nodes))],
-            [net.relay_nodes[i].y for i in range(len(net.relay_nodes))],
-            marker='^', color='b', label='Relay')
+                [net.relay_nodes[i].y for i in range(len(net.relay_nodes))],
+                marker='^', color='b', label='Relay')
     plt.plot([net.Base.x], [net.Base.y], 'yv', markersize=12, label='Base station')
     ax.set_aspect(1)
     if map is not None:
