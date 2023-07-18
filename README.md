@@ -13,4 +13,4 @@
 
 For example: `python main.py --N 100 --qm 5 --rs 30 --rc 80 --rcl 80 --ra True --b 10,10`
 
-The output includes: target locations, base location, sensor locations and relay locations. All of them are dumped into a json file `out.json`.
+The output includes: target locations, base location, sensor locations and relay locations. All of them are dumped into a json file `out.json`. The visualization of the results is also created.
